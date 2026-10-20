@@ -1,3 +1,7 @@
+-- Switch to your database
+USE MyDatabase;
+GO
+
 -- Retrieve all customer data
 SELECT * from Customers
 
@@ -21,3 +25,6 @@ SELECT * from Customers
 -- SELECT * from customers ORDER BY Country ASC, score DESC
 -- SELECT * FROM CUSTOMERS ORDER BY COUNTRY DESC
 
+-- Combine rows with same value
+SELECT Country , SUM(score) from customers GROUP BY Country
+SELECT Country , SUM(score) AS TotalScore , COUNT(id) AS CustomerCount from customers Group BY country
