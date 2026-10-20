@@ -4,6 +4,7 @@ SELECT * from Customers
 -- Retrieve name , country from customers data
 -- select first_name , country from Customers
 
+
 -- Retreive name , country , score from customers data >500
 -- SELECT first_name , country , score from customers where score>500
 
@@ -19,3 +20,4 @@ SELECT * from Customers
 -- SELECT * from customers ORDER BY SCORE DESC
 -- SELECT * from customers ORDER BY Country ASC, score DESC
 -- SELECT * FROM CUSTOMERS ORDER BY COUNTRY DESC
+
