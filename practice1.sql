@@ -3,7 +3,7 @@ USE MyDatabase;
 GO
 
 -- Retrieve all customer data
-SELECT * from Customers
+-- SELECT * from Customers
 
 -- Retrieve name , country from customers data
 -- select first_name , country from Customers
@@ -26,5 +26,39 @@ SELECT * from Customers
 -- SELECT * FROM CUSTOMERS ORDER BY COUNTRY DESC
 
 -- Combine rows with same value
-SELECT Country , SUM(score) from customers GROUP BY Country
-SELECT Country , SUM(score) AS TotalScore , COUNT(id) AS CustomerCount from customers Group BY country
+-- SELECT Country , SUM(score) from customers GROUP BY Country
+-- SELECT Country , SUM(score) AS TotalScore , COUNT(id) AS CustomerCount from customers Group BY country
+
+-- SQL QUERY HAVING Filter Aggregated Data
+-- SELECT country , AVG(score) as avg_score from Customers where score != 0 GROUP BY country HAVING AVG(score) > 430
+-- SELECT country , AVG(score) AS avg_score from customers where score != 0 GROUP BY country HAVING AVG(SCORE) > 430
+
+-- DISTINCT QUERY
+-- select DISTINCT COUNTRY FROM CUSTOMERS
+-- SELECT id from customers
+-- SELECT DISTINCT id from customers
+
+-- TOP IN QUERY
+-- SELECT TOP 3 * from customers
+-- select TOP 3 * from CUSTOMERS ORDER BY score DESC
+-- SELECT TOP 2 * from customers ORDER BY score ASC
+
+-- RECENT ORDERS
+-- SELECT * from orders ORDER BY order_date DESC
+-- SELECT Top 2 * from orders ORDER BY order_date ASC
+
+-- MULTI QUERIES
+
+-- SELECT * FROM customers;
+
+-- SELECT * FROM orders;
+
+-- SELECT 123 AS static_number
+
+-- SELECT 'Hello World' AS STATIC_STRING
+
+-- SELECT id , first_name , 'New Customer' AS customer_type from customers
+
+-- SELECT * FROM customers where country = 'Germany'
+
+-- SELECT * FROM orders
