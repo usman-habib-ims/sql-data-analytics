@@ -2,6 +2,10 @@
 USE MyDatabase;
 GO
 
+-- ===================================================================================================
+-- SELECT QUERIES
+-- ===================================================================================================
+
 -- Retrieve all customer data
 -- SELECT * from Customers
 
@@ -62,3 +66,29 @@ GO
 -- SELECT * FROM customers where country = 'Germany'
 
 -- SELECT * FROM orders
+
+-- ===================================================================================================
+-- DDL Commands
+-- ===================================================================================================
+
+-- create new table persons
+-- CREATE table Persons (
+--     id INT NOT NULL,
+--     person_name VARCHAR(50) not null,
+--     birth_date DATE,
+--     phone VARCHAR(15) not null,
+--     CONSTRAINT pk_persons PRIMARY KEY (id),
+-- );
+
+-- SELECT * FROM Persons
+
+-- add new column email to persons table
+-- Alter table Persons
+-- add email VARCHAR(50) NOT NULL;
+
+-- delete column email from persons
+-- Alter table Persons
+-- drop column email;
+
+-- Drop table persons
+-- DROP TABLE Persons;
