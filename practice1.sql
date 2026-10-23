@@ -92,3 +92,32 @@ GO
 
 -- Drop table persons
 -- DROP TABLE Persons;
+
+-- ===================================================================================================
+-- DML Commands
+-- ===================================================================================================
+
+-- INSERT INTO customers (id , first_name , country , score)
+-- VALUES (6 , 'John' , 'USA' , NULL),
+-- (7, 'Jane' , NULL , 100)
+
+-- INSERT INTO customers (id , first_name , country , score)
+-- VALUES (8 , 'Max' , 'USA' , NULL)
+
+-- INSERT INTO customers
+-- VALUES (9 , 'Alias' , 'Germany' , NULL) , (10 , 'Mia' , NULL , NULL)
+
+-- INSERT data from "Customers" int "Persons"
+-- INSERT INTO persons (id , person_name , birth_date , phone)
+-- SELECT id , first_name , NULL , 'UNKNOWN' FROM CUSTOMERS
+
+-- Change score of customer 6 to 0
+-- UPDATE customers SET score = 0 where SCORE IS NULL;
+
+-- DELETE ROWS
+-- delete from customers where id > 5;
+
+-- Delete all rows from PERSONS table
+-- TRUNCATE TABLE persons;
+
+-- SELECT * FROM persons;
