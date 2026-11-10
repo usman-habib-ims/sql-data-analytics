@@ -121,3 +121,56 @@ GO
 -- TRUNCATE TABLE persons;
 
 -- SELECT * FROM persons;
+
+-- ===================================================================================================
+-- intermediate level : FILTERING DATA
+-- ===================================================================================================
+
+-- ================================
+-- COMPARISON OPERATORS = compare two things (= , != , > , < , >= , <=) {Expression Operators Expression}
+-- ================================
+
+-- Select * from customers where Country = 'Germany'
+
+-- SELECT * from customers where country != 'Germany'
+
+-- SELECT * FROM customers where score > 500
+
+-- SELECT * from customers where score <= 500
+
+-- SELECT * from customers where country = 'USA' AND score > 500
+
+-- SELECT * from customers where country = 'USA' OR score > 500
+
+-- SELECT * from customers where NOT score < 500
+
+-- ================================
+-- Retrieve customers using between
+-- ================================
+
+-- SELECT * from customers where score >= 100 AND score <= 500
+
+-- SELECT * from customers where score between 200 and 800
+
+-- ================================
+-- Retrieve customers using IN()
+-- ================================
+
+-- SELECT * from customers where country = 'USA' OR country = 'Germany'
+
+-- SELECT * from customers where country IN ('USA' , 'Germany')
+
+-- SELECT * from customers where country NOT IN ('USA' , 'Germany')
+
+-- ================================
+-- Retrieve customers using LIKE (% , _)
+-- ================================
+-- SELECT * from customers
+
+-- SELECT * from customers where first_name LIKE 'M%'
+
+-- SELECT * from customers where first_name LIKE '%n'
+
+-- SELECT * FROM CUSTOMERS WHERE first_name LIKE '%r%'
+
+-- SELECT * from customers where first_name LIKE '__r%'
