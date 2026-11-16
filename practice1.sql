@@ -174,3 +174,47 @@ GO
 -- SELECT * FROM CUSTOMERS WHERE first_name LIKE '%r%'
 
 -- SELECT * from customers where first_name LIKE '__r%'
+
+-- ===================================================================================================
+-- SQL JOINS : BASICS
+-- ===================================================================================================
+
+-- ================================
+-- Retrieve customers and orders
+-- ================================
+
+-- SELECT * from customers
+
+-- SELECT * from orders
+
+-- ================================
+-- Get all customers along with their orders, but only those customers who have placed an order. (INNER JOIN)
+-- ================================
+
+-- SELECT * from customers INNER JOIN orders on id = customer_id
+
+-- SELECT * from customers INNER JOIN orders on id  = customer_id
+
+-- SELECT id, first_name, order_id, sales from customers INNER JOIN orders on id = customer_id
+
+-- SELECT c.id , c.first_name , o.order_id , o.sales from customers as c INNER JOIN orders as o on c.id = o.customer_id
+
+-- ================================
+-- Get all customers along with their orders, including those without orders (Left Join)
+-- ================================
+
+-- SELECT c.id , c.first_name , o.order_id , o.sales from customers as c LEFT Join orders as o on c.id = o.customer_id
+
+-- ================================
+-- RIGHT Join
+-- ================================
+
+-- SELECT c.id , c.first_name , o.order_id , o.sales from customers as c RIGHT JOIN orders as o on c.id = o.customer_id
+
+-- SELECT c.id , c.first_name , o.order_id , o.sales from orders as o LEFT JOIN customers as c on o.customer_id = c.id
+
+-- ================================
+-- FULL Join
+-- ================================
+
+-- SELECT c.id , c.first_name , o.order_id , o.sales from customers as c FULL JOIN orders as o on c.id = o.customer_id
