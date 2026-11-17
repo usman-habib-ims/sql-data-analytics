@@ -218,3 +218,35 @@ GO
 -- ================================
 
 -- SELECT c.id , c.first_name , o.order_id , o.sales from customers as c FULL JOIN orders as o on c.id = o.customer_id
+
+-- ===================================================================================================
+-- SQL JOINS : ADVANCED
+-- ===================================================================================================
+
+-- ================================
+-- LEFT ANTI JOIN
+-- ================================
+
+-- SELECT * from customers as c LEFT JOIN orders as o on c.id = o.customer_id where o.customer_id is NULL
+
+-- ================================
+-- RIGHT ANTI JOIN
+-- ================================
+
+-- SELECT * from customers as c RIGHT JOIN orders as o on c.id = o.customer_id where c.id is NULL
+
+-- SELECT * from orders as o LEFT JOIN customers as c on c.id = o.customer_id where c.id is NULL
+
+-- ================================
+-- FULL ANTI JOIN
+-- ================================
+
+-- SELECT * from customers as c FULL JOIN orders as o on c.id = o.customer_id where c.id IS NULL OR o.customer_id IS NULL
+
+-- SELECT * from customers as c LEFT JOIN orders as o ON c.id = o.customer_id where o.customer_id IS NOT NULL
+
+-- ================================
+-- CROSS JOIN
+-- ================================
+
+-- SELECT * from customers CROSS JOIN orders
