@@ -143,3 +143,9 @@ GO
 
 -- SELECT 'sql.txt' as old_file,
 -- replace('sql.txt' , '.txt' , '.csv') AS new_file
+
+-- 6: LEN = Counts how many characters
+-- SELECT
+-- FirstName,
+-- LEN(FirstName) AS len_name
+-- from Sales.Customers
