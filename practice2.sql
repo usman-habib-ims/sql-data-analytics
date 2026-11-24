@@ -106,3 +106,40 @@ GO
 
 -- =======================================
 
+-- =======================================
+-- SQL FUNCTIONS
+-- =======================================
+
+-- SINGLE ROW FUNCTIONS (ROW LEVEL CALCULATIONS)
+
+-- =================
+-- 1: CONCAT = Concatenate two or more strings into one string
+
+-- Select FirstName, country, CONCAT(FirstName, ' ' ,Country) AS name_country  from Sales.Customers
+
+-- 2: UPPER = Convert a string to uppercase
+
+-- SELECT FirstName, country, CONCAT(FirstName , ' ' , Country) AS name_country, UPPER(FirstName) AS Upper_FirstName
+-- from Sales.Customers
+
+-- 3: LOWER = Convert a string to lowercase
+
+-- SELECT FirstName , country , CONCAT(FirstName, ' ' , country) AS name_country, LOWER(FirstName) as Lower_FirstName
+-- , UPPER(FirstName) AS Upper_FirstName from Sales.Customers
+
+-- 4: TRIM = Remove leading and trailing spaces from a string
+
+-- SELECT FirstName,
+-- LEN(FirstName) AS len_name,
+-- LEN(TRIM(FirstName)) AS len_trim_name,
+-- LEN(FirstName) - LEN(TRIM(FirstName)) AS len_diff
+-- from Sales.Customers
+-- WHERE LEN(FirstName) != LEN(TRIM(FirstName))
+-- WHERE FirstName != TRIM(FirstName)
+
+-- 5: REPLACE = Replace specific characters with a new characters
+-- SELECT '123-456' as PHONE,
+-- replace('123-456' , '-' , '/') AS Replace_phone
+
+-- SELECT 'sql.txt' as old_file,
+-- replace('sql.txt' , '.txt' , '.csv') AS new_file
