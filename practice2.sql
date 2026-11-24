@@ -112,7 +112,8 @@ GO
 
 -- SINGLE ROW FUNCTIONS (ROW LEVEL CALCULATIONS)
 
--- =================
+-- =================STRING FUNCTIONS========================
+
 -- 1: CONCAT = Concatenate two or more strings into one string
 
 -- Select FirstName, country, CONCAT(FirstName, ' ' ,Country) AS name_country  from Sales.Customers
@@ -149,3 +150,18 @@ GO
 -- FirstName,
 -- LEN(FirstName) AS len_name
 -- from Sales.Customers
+
+-- 7: LEFT = Extract specific number of characters from the start
+-- SELECT
+-- FirstName,
+-- LEFT(FirstName, 3) AS Left_ones
+-- from Sales.Customers
+
+-- 8: RIGHT = Extract specific number of characters from the end
+-- SELECT
+-- FirstName,
+-- RIGHT(FirstName, 3) AS Right_ones
+-- from Sales.Customers
+
+-- 9: SUBSTRING = Extract a part of String from a specific position
+-- SELECT FirstName, SUBSTRING(FirstName , 3, LEN(FirstName)) AS Substring_name from Sales.Customers
