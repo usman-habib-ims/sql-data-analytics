@@ -117,16 +117,19 @@ GO
 -- 1: CONCAT = Concatenate two or more strings into one string
 
 -- Select FirstName, country, CONCAT(FirstName, ' ' ,Country) AS name_country  from Sales.Customers
+-- SELECT FirstName, country , CONCAT (FirstName, ' ' , Country) AS name_country from Sales.Customers
 
 -- 2: UPPER = Convert a string to uppercase
 
 -- SELECT FirstName, country, CONCAT(FirstName , ' ' , Country) AS name_country, UPPER(FirstName) AS Upper_FirstName
 -- from Sales.Customers
+-- SELECT FirstName , Country , UPPER(FirstName) AS UPPER_NAMES FROM Sales.Customers
 
 -- 3: LOWER = Convert a string to lowercase
 
 -- SELECT FirstName , country , CONCAT(FirstName, ' ' , country) AS name_country, LOWER(FirstName) as Lower_FirstName
 -- , UPPER(FirstName) AS Upper_FirstName from Sales.Customers
+-- SELECT FirstName , Country , LOWER(FirstName) AS LOWER from Sales.Customers
 
 -- 4: TRIM = Remove leading and trailing spaces from a string
 
@@ -145,11 +148,15 @@ GO
 -- SELECT 'sql.txt' as old_file,
 -- replace('sql.txt' , '.txt' , '.csv') AS new_file
 
+-- SELECT 'Macbook' as old_name,
+-- replace('Macbook' , 'book' , ' pro') as new_name
+
 -- 6: LEN = Counts how many characters
 -- SELECT
 -- FirstName,
 -- LEN(FirstName) AS len_name
 -- from Sales.Customers
+-- SELECT FirstName, LEN(FirstName) AS len_name from Sales.Customers where LEN(FirstName) = 4
 
 -- 7: LEFT = Extract specific number of characters from the start
 -- SELECT
@@ -165,3 +172,13 @@ GO
 
 -- 9: SUBSTRING = Extract a part of String from a specific position
 -- SELECT FirstName, SUBSTRING(FirstName , 3, LEN(FirstName)) AS Substring_name from Sales.Customers
+
+-- =================NUMERIC FUNCTIONS========================
+
+-- select 3.516, ROUND(3.516, 2) AS round_2
+-- SELECT 3.516, ROUND(3.516,1) AS round_1
+-- SELECT 3.516, ROUND(3.516, 0) AS ROUND_0
+
+-- ABS = ABSOLUTE VALUE which means it will convert negative numbers to positive numbers
+-- and if no. is in positive then nothing changes
+-- select -10, ABS(-10), ABS(10)
